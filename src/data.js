@@ -46,5 +46,27 @@ export const PROFILE_DATA = {
         "Mempertahankan produktivitas >90% dalam workload tiket yang tinggi."
       ]
     }
+  ],
+  skills: [
+    {
+      category: "Tools & Systems",
+      icon: "Wrench",
+      items: ["SAP (MM)", "Accurate", "Microsoft Excel Pro", "Looker Studio", "Google Apps Script"]
+    },
+    {
+      category: "Certifications",
+      icon: "Award",
+      items: ["POP (Pengawas Operasional Pertama)", "GMP & QA in Food Industry", "ISO 31000:2018 Risk Management", "Microsoft Excel Professional"]
+    },
+    {
+      category: "Supply Chain & Soft Skills",
+      icon: "TrendingUp",
+      items: ["Procurement & Vendor Management", "Inventory Control & Auditing", "Leadership (Tim 6+ orang)", "Negosiasi & Problem Solving"]
+    },
+    {
+      category: "Languages",
+      icon: "Globe",
+      items: ["Indonesian (Native)", "English (Intermediate, TOEFL ITP: 513)"]
+    }
   ]
 };

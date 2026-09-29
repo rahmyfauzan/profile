@@ -1,6 +1,7 @@
 
 import Hero from './components/Hero';
 import Experience from './components/Experience';
+import Skills from './components/Skills';
 import FloatingContact from './components/FloatingContact';
 import { PROFILE_DATA } from './data';
 import gsap from 'gsap';
@@ -41,6 +42,7 @@ function App() {
       </section>
 
       <Experience />
+      <Skills />
       
       <div className="h-screen bg-black flex items-center justify-center gs-reveal">
          <h2 className="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-500">Let's build something great.</h2>
