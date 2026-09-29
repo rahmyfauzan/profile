@@ -35,7 +35,7 @@ export default function Skills() {
   };
 
   return (
-    <section ref={container} id="skills" className="min-h-screen bg-black pt-20 pb-40 px-4 md:px-6 flex flex-col justify-center items-center">
+    <section ref={container} id="skills" className="min-h-screen bg-black pt-32 pb-40 px-4 md:px-6 flex flex-col items-center">
       <h2 className="text-4xl md:text-6xl font-extrabold mb-12 md:mb-20 text-center text-white tracking-tight">
         Technical <span className="text-brand-gold">Skills.</span>
       </h2>

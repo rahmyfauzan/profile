@@ -18,13 +18,20 @@ export default function FloatingContact() {
   }, []);
 
   const scrollForward = () => {
-    // 1 klik = tepat 1 tinggi layar (sinkron dengan durasi GSAP)
-    window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+    const h = window.innerHeight;
+    const currentY = window.scrollY;
+    // Hitung posisi halaman berikutnya dengan presisi penuh (dibulatkan ke bawah lalu ditambah 1)
+    const target = Math.floor((currentY + 10) / h + 1) * h;
+    window.scrollTo({ top: target, behavior: 'smooth' });
   };
 
   const scrollBackward = () => {
-    // 1 klik = tepat 1 tinggi layar ke atas
-    window.scrollBy({ top: -window.innerHeight, behavior: 'smooth' });
+    const h = window.innerHeight;
+    const currentY = window.scrollY;
+    // Hitung posisi halaman sebelumnya dengan presisi penuh
+    const target = Math.ceil((currentY - 10) / h - 1) * h;
+    // Cegah scroll tembus di bawah 0
+    window.scrollTo({ top: Math.max(0, target), behavior: 'smooth' });
   };
 
   const scrollToTop = () => {
