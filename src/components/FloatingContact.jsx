@@ -13,15 +13,20 @@ export default function FloatingContact() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const getSnapHeight = () => {
+    const heroSection = document.querySelector('section');
+    return heroSection ? heroSection.offsetHeight : window.innerHeight;
+  };
+
   const scrollForward = () => {
-    const h = window.innerHeight;
+    const h = getSnapHeight();
     const currentY = window.scrollY;
     const target = Math.floor((currentY + 10) / h + 1) * h;
     window.scrollTo({ top: target, behavior: 'smooth' });
   };
 
   const scrollBackward = () => {
-    const h = window.innerHeight;
+    const h = getSnapHeight();
     const currentY = window.scrollY;
     const target = Math.ceil((currentY - 10) / h - 1) * h;
     window.scrollTo({ top: Math.max(0, target), behavior: 'smooth' });

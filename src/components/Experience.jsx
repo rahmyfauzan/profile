@@ -14,7 +14,7 @@ export default function Experience() {
       trigger: wrapper.current,
       pin: true,
       scrub: 1,
-      end: () => "+=" + ((panels.length - 1) * window.innerHeight)
+      end: () => "+=" + (wrapper.current.offsetHeight * (panels.length - 1))
     };
 
     gsap.to(panels, {
@@ -29,7 +29,7 @@ export default function Experience() {
       scrollTrigger: {
         trigger: wrapper.current,
         scrub: 1,
-        end: () => "+=" + ((panels.length - 1) * window.innerHeight)
+        end: () => "+=" + (wrapper.current.offsetHeight * (panels.length - 1))
       }
     });
 
