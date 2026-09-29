@@ -1,4 +1,3 @@
-
 import { PROFILE_DATA } from '../data';
 import { useRef } from 'react';
 import gsap from 'gsap';
@@ -64,16 +63,16 @@ export default function Experience() {
         {/* Experience Cards */}
         {PROFILE_DATA.experience.map((exp) => (
           <div key={exp.id} className="exp-panel w-screen h-full flex justify-center items-center shrink-0 px-4 md:px-6">
-            <div className="bg-white/5 border border-white/10 backdrop-blur-xl p-5 md:p-14 rounded-2xl md:rounded-3xl w-full max-w-4xl shadow-2xl">
+            <div className="bg-white/5 border border-white/10 backdrop-blur-xl p-5 md:p-12 rounded-2xl md:rounded-3xl w-full max-w-4xl shadow-2xl">
               <span className="text-brand-gold text-xs md:text-base font-bold tracking-[0.15em] md:tracking-[0.2em] uppercase mb-2 md:mb-4 block">
                 {exp.period}
               </span>
-              <h3 className="text-xl md:text-5xl font-extrabold mb-1 md:mb-2 tracking-tight">{exp.role}</h3>
-              <h4 className="text-sm md:text-2xl text-slate-400 mb-4 md:mb-8 font-medium leading-snug">{exp.company}</h4>
+              <h3 className="text-xl md:text-4xl font-extrabold mb-1 md:mb-2 tracking-tight">{exp.role}</h3>
+              <h4 className="text-sm md:text-xl text-slate-400 mb-4 md:mb-6 font-medium leading-snug">{exp.company}</h4>
               
-              <ul className="space-y-2 md:space-y-4">
+              <ul className="space-y-2 md:space-y-3">
                 {exp.points.map((point, idx) => (
-                  <li key={idx} className="flex gap-2 md:gap-4 text-slate-300 text-sm md:text-xl leading-relaxed">
+                  <li key={idx} className="flex gap-2.5 md:gap-4 text-slate-300 text-xs md:text-lg leading-relaxed">
                     <span className="text-brand-gold text-xs md:text-base mt-0.5">✦</span>
                     <span>{point}</span>
                   </li>
