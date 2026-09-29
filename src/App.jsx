@@ -31,12 +31,12 @@ function App() {
       <Hero />
       
       {/* About Section */}
-      <section className="min-h-screen flex flex-col justify-center items-center px-6 text-center gs-reveal">
-        <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+      <section className="h-screen flex flex-col justify-center items-center px-5 md:px-6 text-center gs-reveal">
+        <h2 className="text-2xl md:text-5xl font-bold mb-4 md:mb-6 text-white leading-snug">
           Mendorong efisiensi logistik.<br/>
           <span className="text-slate-500">Menekan biaya pengadaan.</span>
         </h2>
-        <p className="text-lg md:text-2xl leading-relaxed text-slate-400 max-w-4xl">
+        <p className="text-sm md:text-2xl leading-relaxed text-slate-400 max-w-4xl">
           {PROFILE_DATA.about}
         </p>
       </section>
@@ -44,8 +44,8 @@ function App() {
       <Experience />
       <Skills />
       
-      <div className="h-screen bg-black flex items-center justify-center gs-reveal">
-         <h2 className="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-500">Let's build something great.</h2>
+      <div className="h-screen bg-black flex items-center justify-center gs-reveal px-6">
+         <h2 className="text-2xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-500 text-center leading-snug">Let's build something great.</h2>
       </div>
       
       <FloatingContact />
