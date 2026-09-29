@@ -32,13 +32,16 @@ export default function Hero() {
     <section ref={container} className="h-screen w-full relative flex justify-center items-center overflow-hidden bg-black">
       
       {/* Giant Name (Initial state visible) */}
-      <div className="hero-giant-name absolute z-10 text-center w-full px-4">
-        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[6vw] font-extrabold leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-500 uppercase">
-          RAHMY FAUZANIBUDI
+      <div className="hero-giant-name absolute z-10 text-center w-full px-4 flex flex-col items-center">
+        <h1 className="text-[14vw] md:text-[9vw] font-extrabold leading-[0.9] tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-500 uppercase">
+          RAHMY
         </h1>
-        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[4vw] font-extrabold leading-tight tracking-tight text-white uppercase mt-2">
+        <h1 className="text-[14vw] md:text-[9vw] font-extrabold leading-[0.9] tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-500 uppercase">
+          FAUZANIBUDI
+        </h1>
+        <h2 className="text-[5vw] md:text-[3vw] font-bold leading-tight tracking-widest text-brand-gold uppercase mt-4">
           AHMAD, S.T.
-        </h1>
+        </h2>
       </div>
 
       {/* Hidden Photo & Role (Revealed on scroll) */}
