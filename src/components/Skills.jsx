@@ -8,19 +8,19 @@ export default function Skills() {
   const container = useRef(null);
 
   useGSAP(() => {
-    // Setiap kartu muncul satu per satu saat di-scroll
-    gsap.utils.toArray('.skill-card').forEach((card) => {
+    gsap.utils.toArray('.skill-card').forEach((card, i) => {
       gsap.fromTo(card, 
-        { y: 60, opacity: 0, scale: 0.95 },
+        { y: 40, opacity: 0, scale: 0.95 },
         {
           y: 0,
           opacity: 1,
           scale: 1,
-          duration: 0.8,
+          duration: 0.6,
+          delay: i * 0.1,
           ease: "back.out(1.4)",
           scrollTrigger: {
-            trigger: card,
-            start: "top 85%",
+            trigger: container.current,
+            start: "top 60%",
           }
         }
       );
@@ -29,43 +29,40 @@ export default function Skills() {
 
   const getIcon = (iconName) => {
     switch(iconName) {
-      case 'Wrench': return <Wrench className="w-10 h-10 text-brand-gold mb-4" />;
-      case 'Award': return <Award className="w-10 h-10 text-brand-gold mb-4" />;
-      case 'TrendingUp': return <TrendingUp className="w-10 h-10 text-brand-gold mb-4" />;
-      case 'Globe': return <Globe className="w-10 h-10 text-brand-gold mb-4" />;
+      case 'Wrench': return <Wrench className="w-6 h-6 md:w-8 md:h-8 text-brand-gold shrink-0" />;
+      case 'Award': return <Award className="w-6 h-6 md:w-8 md:h-8 text-brand-gold shrink-0" />;
+      case 'TrendingUp': return <TrendingUp className="w-6 h-6 md:w-8 md:h-8 text-brand-gold shrink-0" />;
+      case 'Globe': return <Globe className="w-6 h-6 md:w-8 md:h-8 text-brand-gold shrink-0" />;
       default: return null;
     }
   };
 
   return (
-    <section ref={container} id="skills" className="bg-black pt-32 pb-40 px-4 md:px-6">
-      <h2 className="text-4xl md:text-6xl font-extrabold mb-12 md:mb-20 text-center text-white tracking-tight">
+    <section ref={container} id="skills" className="h-screen bg-black px-4 md:px-8 flex flex-col justify-center items-center">
+      <h2 className="text-3xl md:text-5xl font-extrabold mb-6 md:mb-10 text-center text-white tracking-tight">
         Technical <span className="text-brand-gold">Skills.</span>
       </h2>
       
-      {/* 1 kartu per baris, ditampilkan secara vertikal */}
-      <div className="flex flex-col gap-8 md:gap-10 w-full max-w-4xl mx-auto">
+      <div className="grid grid-cols-2 gap-3 md:gap-6 w-full max-w-5xl">
         {PROFILE_DATA.skills.map((skill, index) => (
           <div 
             key={index} 
-            className="skill-card bg-white/5 border border-white/10 backdrop-blur-xl p-8 md:p-12 rounded-3xl shadow-2xl hover:border-brand-gold/30 hover:bg-white/10 transition-all"
+            className="skill-card bg-white/5 border border-white/10 backdrop-blur-xl p-4 md:p-8 rounded-2xl md:rounded-3xl shadow-2xl flex flex-col hover:border-brand-gold/30 hover:bg-white/10 transition-all"
           >
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex items-center gap-2 md:gap-3 mb-3 md:mb-5">
               {getIcon(skill.icon)}
-              <h3 className="text-2xl md:text-3xl font-extrabold text-white tracking-tight">
+              <h3 className="text-sm md:text-xl font-extrabold text-white tracking-tight leading-tight">
                 {skill.category}
               </h3>
             </div>
-            <div className="flex flex-wrap gap-3">
+            <ul className="space-y-1.5 md:space-y-2">
               {skill.items.map((item, idx) => (
-                <span 
-                  key={idx} 
-                  className="bg-white/10 border border-white/10 text-slate-200 px-4 py-2 rounded-full text-sm md:text-base font-medium hover:bg-brand-gold/20 hover:border-brand-gold/40 hover:text-white transition-all"
-                >
-                  {item}
-                </span>
+                <li key={idx} className="flex items-start gap-2 text-slate-300 text-xs md:text-base leading-relaxed">
+                  <span className="text-brand-gold text-[10px] md:text-sm mt-0.5">✦</span>
+                  <span>{item}</span>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         ))}
       </div>
