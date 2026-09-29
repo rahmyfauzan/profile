@@ -13,7 +13,7 @@ export default function Hero() {
       scrollTrigger: {
         trigger: container.current,
         start: "top top",
-        end: "+=150%", // Scrub distance
+        end: "+=100%", // Exactly 1 viewport height
         scrub: 1,
         pin: true,
       }

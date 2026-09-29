@@ -18,7 +18,7 @@ export default function Experience() {
         trigger: wrapper.current,
         pin: true,
         scrub: 1,
-        end: () => "+=" + track.current.offsetWidth
+        end: () => "+=" + ((panels.length - 1) * window.innerHeight)
       }
     });
   }, { scope: wrapper });
