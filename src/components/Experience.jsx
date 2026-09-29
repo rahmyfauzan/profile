@@ -29,10 +29,10 @@ export default function Experience() {
         
         {/* Intro Panel */}
         <div className="exp-panel w-screen h-full flex flex-col justify-center px-10 md:px-32 shrink-0">
-          <h2 className="text-7xl md:text-[10vw] font-extrabold tracking-tighter leading-none text-slate-800" style={{ WebkitTextStroke: '2px rgba(255,255,255,0.2)' }}>
+          <h2 className="text-5xl sm:text-7xl md:text-[8vw] font-extrabold tracking-tighter leading-none text-slate-800" style={{ WebkitTextStroke: '2px rgba(255,255,255,0.2)' }}>
             Professional
           </h2>
-          <h2 className="text-7xl md:text-[10vw] font-extrabold tracking-tighter leading-none">
+          <h2 className="text-5xl sm:text-7xl md:text-[8vw] font-extrabold tracking-tighter leading-none">
             Experience.
           </h2>
         </div>

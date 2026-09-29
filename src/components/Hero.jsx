@@ -32,27 +32,27 @@ export default function Hero() {
     <section ref={container} className="h-screen w-full relative flex justify-center items-center overflow-hidden bg-black">
       
       {/* Giant Name (Initial state visible) */}
-      <div className="hero-giant-name absolute z-10 text-center w-full">
-        <h1 className="text-[10vw] font-extrabold leading-none tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-500 uppercase whitespace-nowrap">
+      <div className="hero-giant-name absolute z-10 text-center w-full px-4">
+        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[6vw] font-extrabold leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-500 uppercase">
           RAHMY FAUZANIBUDI
         </h1>
-        <h1 className="text-[6vw] font-extrabold leading-none tracking-tight text-white uppercase">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[4vw] font-extrabold leading-tight tracking-tight text-white uppercase mt-2">
           AHMAD, S.T.
         </h1>
       </div>
 
       {/* Hidden Photo & Role (Revealed on scroll) */}
-      <div className="hero-image-container absolute z-20 flex flex-col items-center">
+      <div className="hero-image-container absolute z-20 flex flex-col items-center px-4">
         <img 
           src={PROFILE_DATA.photo} 
           alt={PROFILE_DATA.name} 
           className="hero-photo w-48 h-48 md:w-64 md:h-64 rounded-full object-cover shadow-[0_0_50px_rgba(255,255,255,0.1)] opacity-0 scale-[3] blur-xl"
         />
-        <div className="hero-role mt-8 text-center opacity-0 translate-y-8">
-          <h2 className="text-2xl md:text-3xl text-brand-gold font-medium mb-2">
+        <div className="hero-role mt-6 text-center opacity-0 translate-y-8">
+          <h2 className="text-xl md:text-3xl text-brand-gold font-semibold mb-2 drop-shadow-md">
             {PROFILE_DATA.title}
           </h2>
-          <p className="text-slate-400 text-sm md:text-base tracking-widest uppercase">
+          <p className="text-slate-300 text-xs md:text-sm tracking-[0.2em] uppercase font-medium">
             {PROFILE_DATA.subtitle}
           </p>
         </div>
